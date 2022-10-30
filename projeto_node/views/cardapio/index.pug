@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  p= msg
+  table(class="uk-table uk-table-striped uk-table-small")
+      thead
+        tr
+          th ID
+          th Nome do produto
+          th Preço do produto
+          th Ação
+      tfoot
+      tbody
+        each cardapio in produtos
+          tr
+            td= cardapio._id
+            td= cardapio.nome
+            td= cardapio.preco
+            td
+              a(href=cardapio.url+'/update') Atualizar
+              span |
+              a(href=cardapio.url+'/delete') Deletar

@@ -3,7 +3,7 @@ const Cardapio = require('../models/cardapio');
 
 exports.list = async (req, res) => {
     await Cardapio.find({}).exec(function(err, docs) {
-        res.render("cardapio/index", { animais : docs, msg : res.msg});
+        res.render("cardapio/index", { produtos: docs, msg : res.msg});
     });
 }
 
@@ -14,7 +14,7 @@ exports.show = (req, res) => {
 exports.create = (req, res) => {
     if (req.method == "POST") {
         const cardapioDocument = new Cardapio({
-            nome: req.body.nome
+            nome: req.body.nome,
             preco: req.body.preco
         });
         cardapioDocument
@@ -55,7 +55,7 @@ exports.update = async (req, res) => {
 
 exports.delete = async (req, res) => {
     var msg;
-    await Cardapio.findOneAndDelete({ _id: new ObjectId(req.params.animalId) }).then(function (err, data) {
+    await Cardapio.findOneAndDelete({ _id: new ObjectId(req.params.CardapioId) }).then(function (err, data) {
         msg = "Produto excluído com sucesso!";
         res.msg = msg;
         exports.list(req, res);
