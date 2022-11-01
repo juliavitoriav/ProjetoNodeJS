@@ -1,8 +1,0 @@
-extends ../layout
-
-block content
-  p= msg
-  form(action='create' method='POST')
-    input(name='nome' value='' placeholder='Insira o novo produto para o seu cardápio')
-    input(preco='preco' value='' placeholder='Insira o preço do seu produto')
-    input(type='submit')
