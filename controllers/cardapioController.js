@@ -9,7 +9,7 @@ exports.list = async (req, res) => {
 
 exports.show = (req, res) => {
     res.send(`NÃO IMPLEMENTADO: ${req.params.id}`);
-}
+} 
 
 exports.create = (req, res) => {
     if (req.method == "POST") {
@@ -25,6 +25,7 @@ exports.create = (req, res) => {
             .catch(err => {
                 res.status(500).json({ error: err });
             });
+        console.log(cardapioDocument)
     } else {
         res.render('cardapio/create');
     }
