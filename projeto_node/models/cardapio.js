@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const opts = { toJSON: { virtuals: true } };
 const CardapioSchema = new Schema({
         nome: { type: String, required: true },
-        preco: { type: Double, required: true }
+        preco: { type: Number, required: true }
     },
     opts
 );

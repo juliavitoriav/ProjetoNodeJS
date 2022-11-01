@@ -33,6 +33,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cardapio', cardapioRouter);
+app.use('/sobre', (req, res) => {
+  res.render("layoutsobre")
+})
+
+app.use('/cardapio/create', (req, res) => {
+  res.render("create")
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

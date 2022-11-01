@@ -4,14 +4,14 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width')
     title Space Lanches
-    link(href='style.css' rel='stylesheet' type='text/css')
+    link(href='../public/stylesheets/style.css' rel='stylesheet' type='text/css')
   body
     nav#menu
       ul
         li
-          a(href='index.html') Página Inicial
+          a(href='/') Página Inicial
         li
-          a(href='about.html') Sobre Nós
+          a(href='/sobre') Sobre Nós
     nav#cardapio
       #item
         h2 Coxinha
@@ -56,8 +56,10 @@ html
         p Hambúrguer, queijo, salada e bacon.
         h1 R$ 15,00
         button Comprar
-      br
-      br
 
-       block content
-       include menu
+    a(href='/cardapio/create') Cadastrar produtos
+    br
+    a(href='/cardapio') Listar produtos
+
+    block content
+        include menu
