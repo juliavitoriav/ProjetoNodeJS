@@ -1,8 +1,10 @@
 body{
   /*background-color:#2FSF89;*/
-  background-image:url("https://th.bing.com/th/id/OIP.yESoAB9SuA95Dhe-oPQSWAHaFe?pid=ImgDet&w=4992&h=3696&rs=1");
+  /*background-image:url("hackcdn.com/GaleriaImagem/130275/fotos-para-hamburguerias_fotografia-de-hamburguer-3.JPG");
   background-repeat: repeat-y;
-  background-position:center;
+  background-position:center;*/
+  background-color: #5C4444;
+  /*background-color: aqua;*/
 }
 
 p{
@@ -27,18 +29,21 @@ p{
 #menu ul li{
   display:inline-block;
 }
+
 #menu ul li a{
+  justify-content: center; 
   padding: 10px 75px;
-  font-size:50px;
+  font-size:30px;
   background-color:rgba(0,0,0, 0.85);
   color:#ffffff;
   text-decoration:none;
   border:3px solid #5644;
-  margin-left:0px;
-  margin-right:0px;
+  margin-left:120px;
+  margin-right:120px;
   font-style:georgia;
   border-radius:5px;
   }
+
 #menu ul li a:hover{
   background-color:#5C4444;
   color: #ffffff;
@@ -48,20 +53,12 @@ p{
 #menu a{
   width: 100%;
 }
-#cardapio{
-  display: flex;
-  flex-direction:column;
-  justify-content: center; 
-}
 
-#container img{
+#item{
   padding: 5px;
-  width: 250px;
-  height:200px;
-  border-radius:50px;
-}
-
-  
+  width: 35%;
+  height:20%;
+} 
 
 #item p{
   font-size: 14px;
@@ -79,8 +76,27 @@ p{
 }
 #item button:hover{
   background-color:#f77e4b; 
-  
 }
+
+#cardapio img {
+  margin: auto;
+  width: 80%;
+  height:80%;
+}
+
+#cardapio{
+  display: flex;
+  flex-direction:column;
+  justify-content: center; 
+  width: 105%;
+  height:85%;
+  font-size: small;
+  }
+
+  #cardapio a{
+    text-decoration:none;
+    color: white;
+  }
 
 #about{
   display: flex;
@@ -104,15 +120,6 @@ p{
   text-align:justify;
   font-style:italic;
 } 
-#conteiner img {
-height:200px;
-width:250px;
-}
-#container{
-   display: flex;
-  flex-direction:column;
-  justify-content: center; 
-  }
 
 #body-about{
   display: flex;
@@ -134,4 +141,6 @@ width:250px;
 #about button:hover{
   background-color:#f77e4b; 
 }
-  
+
+
+

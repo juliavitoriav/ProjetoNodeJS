@@ -4,7 +4,9 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width')
     title Space Lanches
-    link(href='../public/stylesheets/style.css' rel='stylesheet' type='text/css')
+    link(rel="stylesheet", href="/stylesheets/style.css")
+
+    //css('../public/stylesheets/style.css')
   body
     nav#menu
       ul
@@ -12,54 +14,54 @@ html
           a(href='/') Página Inicial
         li
           a(href='/sobre') Sobre Nós
+
     nav#cardapio
       #item
+
+        block content
+        include menu
+
         h2 Coxinha
         img(src='https://th.bing.com/th/id/R.75e427f1a753edc6de7d76214e2ba599?rik=wEKWcCIdUMDMAw&pid=ImgRaw&r=0')
         p Frango com catupiry.
-        h1 R$ 3,00
+        h2 R$ 3,00
         button Comprar
     nav#cardapio
       #item
         h2 Pastel
         img(src='https://th.bing.com/th/id/OIP.-j4ErvVYDygl9a6wULmlQgHaE8?pid=ImgDet&rs=1')
         p Frango ou Carne.
-        h1 R$ 5,00
+        h2 R$ 5,00
         button Comprar
     nav#cardapio
       #item
         h2 Tapioca
         img(src='https://th.bing.com/th/id/OIP.qF8m0VpBSUn0Azo70jbyZQHaE7?pid=ImgDet&rs=1')
         p Carne seca com queijo.
-        h1 R$ 2,50
+        h2 R$ 2,50
         button Comprar
     nav#cardapio
       #item
         h2 Bolo de pote
         img(src='https://th.bing.com/th/id/R.ec2c8dd4f4274068812ee215a9deb08d?rik=z4rGcNpt196rvg&pid=ImgRaw&r=0')
-        p
-          | Morango com ninho e Chocolate.
-        p
-        h1 R$ 3,00
+        p Morango com ninho e Chocolate.
+        h2 R$ 3,00
         button Comprar
     nav#cardapio
       #item
         h2 Panqueca
         img(src='https://th.bing.com/th/id/OIP._JPCv81DiGFqjqPQvezZlAHaD7?pid=ImgDet&w=603&h=320&rs=1')
         p Panqueca de carne.
-        h1 R$ 3,00
+        h2 R$ 3,00
         button Comprar
     nav#cardapio
       #item
         h2 Hambúrguer
         img(src='https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2020/05/BierFass-Lago-hamb%C3%BArguer-de-Picanha-cr%C3%A9dito-Inove-Aceleradora.jpg')
         p Hambúrguer, queijo, salada e bacon.
-        h1 R$ 15,00
+        h2 R$ 15,00
         button Comprar
 
-    a(href='/cardapio/create') Cadastrar produtos
-    br
-    a(href='/cardapio') Listar produtos
+   
 
-    block content
-        include menu
+    

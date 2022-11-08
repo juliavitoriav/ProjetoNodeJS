@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
 
-const urlMongo = "mongodb+srv://julia_vitoriav:12345678910@cluster0.um9on5j.mongodb.net/?retryWrites=true&w=majority";
+const urlMongo = "mongodb+srv://julia_vitoriav:12345678910@cluster0.um9on5j.mongodb.net/projeto_node?retryWrites=true&w=majority";
 
 console.log(urlMongo);
 
@@ -15,10 +15,14 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cardapioRouter = require('./routes/cardapio');
+const { db } = require('./models/cardapio');
 
 var app = express();
 
+mongoose.connect(urlMongo);
 
+const dbConnection = mongoose.connection;
+dbConnection.on("error", console.error.bind(console, "Erro na conexão ao MongoDB."));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
